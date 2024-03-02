@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="external/css/intro.css">
+     <link rel="stylesheet" href="external/css/animation.css">
+    <link href="vendor/bootstrap-5.3.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="vendor/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css">
+
+    <title>Renne | Choose a Theme</title>
+</head>
+<body>
+    <div class="container-loading container-fluid" style="background-color: black">
+        <div class="row">
+            <div class="col-sm smaller left-rect-1"></div>
+        </div>
+            <div class="row"> 
+            <div class="col-sm smaller lefter-rect-1"></div>
+        </div>
+            <div class="row"> 
+            <div class="col-sm smaller middle-rect-1"></div>
+        </div>
+            <div class="row"> 
+            <div class="col-sm smaller righter-rect-1"></div>
+        </div>
+            <div class="row"> 
+            <div class="col-sm smaller right-rect-1"></div>
+        </div>
+        <div class="row text-center">
+            <div class="col huge left-rect text-center">R</div>
+            <div class="col huge lefter-rect">E</div>
+            <div class="col huge middle-rect">N</div>
+            <div class="col huge righter-rect">N</div>
+            <div class="col huge right-rect">E</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class='container-fluid top-section'>
+            <h1>CHOOSE A THEME</h1>
+        </div>
+
+        <div class="demo3">
+            <div class="main-body" onmousemove=onMouseMove(event)>
+              <div class="text3">
+            </div>
+            <div class="cursor-div-3">
+              <div class="circular-cursor-3">
+                <i class="bi bi-arrow-up-left"></i>
+                <div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg right-section" onclick="redirectLightMode()">
+                    <h1 class="headering">LIGHT MODE</h1>
+                    <div class="video-container">
+                    <video src="external/videos/clouds background.mp4" autoplay 
+                    muted class="img-fluid video-content"></video>
+                    </div>
+                </div>
+    </div>
+</div>
+</div>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br>
+
+        <div class="demo2">
+            <div class="main-body" onmousemove=onMouseMove_1(event)>
+              <div class="text2">
+            </div>
+            <div class="cursor-div-2">
+              <div class="circular-cursor-2">
+                <i class="bi bi-arrow-up-left"></i>
+                <div>
+                </div>
+              </div>
+              <div class="row">
+        <div class="col-lg right-section" onclick="redirectDarkMode()">
+            <h1 class="headering">DARK MODE</h1>
+            <div class="video-container">
+            <video src="external/videos/clouds background.mp4" autoplay 
+            muted class="img-fluid video-content inverted-video"></video>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+        </div>
+
+
+     
+
+</body>
+<script src="vendor/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+<script src="vendor/aos-master/dist/aos.js"></script>
+<script>
+    function redirectDarkMode() {
+        window.location.href = "dark/main_content.html"
+    }
+
+    function redirectLightMode() {
+        window.location.href = "light/index.html"
+    }
+
+    let cursor;
+cursor = document.getElementsByClassName("circular-cursor-2")[0];
+cursor.style.position = "absolute";
+
+function onMouseMove_1(e) {
+  cursor.animate(
+    {
+      left: `${e.clientX - 120}px`,
+      top: `${e.clientY - 120}px`
+    },
+    { duration: 1000, fill: "forwards" }
+  );
+}
+
+let cursor_1;
+cursor_1 = document.getElementsByClassName("circular-cursor-3")[0];
+cursor_1.style.position = "absolute";
+
+function onMouseMove(e) {
+    cursor_1.animate(
+    {
+      left: `${e.clientX - 120}px`,
+      top: `${e.clientY - 120}px`
+    },
+    { duration: 1000, fill: "forwards" }
+  );
+}
+</script>
+</html>
